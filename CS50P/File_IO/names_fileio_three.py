@@ -1,4 +1,6 @@
-# Version 1 - reading the content of a txt document and sort the information (names in this case):
+# reading the content of a txt document and sort the information (names in this case),
+# using list comprehension:
+
 names = []
 
 with open("names.txt") as file:
