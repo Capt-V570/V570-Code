@@ -1,6 +1,6 @@
 # iterating through a csv file (students.csv) to obtain 'columns', for each element of the students.csv file:
 
-# VERSION 4 - by adding the two variables created in version 3 (see 'students_three.py') into a dictonary (inside of a list),
+# VERSION 4 - by adding the two variables created in version 3 (see 'students_3.py') into a dictonary (inside of a list),
 # using a single line of code:
 
 students = []

@@ -1,7 +1,7 @@
 # iterating through a csv file (students.csv) to obtain 'columns', for each element of the students.csv file:
 
 # VERSION 6 - creating a function that returns the student name from the dictionary created
-# since version 3 (see 'students_three.py'), into a dictonary (inside of a list), using a single line of code:
+# since version 3 (see 'students_3.py'), into a dictonary (inside of a list), using a single line of code:
 
 students = []
 
@@ -17,7 +17,7 @@ def get_name(student):
 
 
 # this function will allow us to sort the list of students by taking the 'key' of the dictionary within that list
-# and reverse the order of the sorted() list.
+# and reverse the order of the sorted() list , thanks to the 'reverse=True'
 for student in sorted(students, key=get_name, reverse=True):
     print(f"Student {student['name']} is coming from {student['family']}'s Family")
 
