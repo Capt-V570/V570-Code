@@ -1,0 +1,8 @@
+Total bytecount:5185
+Files list:
+-------------
+read_and_write.py
+using_shell_methods.py
+ospath_utils.py
+get_list_files_in_dir.py
+textfile.txt
