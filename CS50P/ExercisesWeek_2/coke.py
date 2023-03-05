@@ -17,6 +17,8 @@ def coke_distributor(coin):
     COINS = [25, 10, 5]
     # Initialize the total amount inserted to 0
     total_inserted = 0
+    # Intitialize the total amount of ignored 'owed' coins to 0:
+    total_ignored = 0
     # Prompt the user to insert coins until the cost of a bottle of Coke is reached
     while total_inserted < COST:
         # Prompt the user to insert a coin & keep track of the change insert from the user
@@ -26,12 +28,17 @@ def coke_distributor(coin):
             # keep record of the coins inserted
             total_inserted += coin
             # Inform user in case the coin is not accepted:
-        if coin != COINS:
-            print("Change not accepted")
+        elif coin != COINS:
+            total_ignored += coin
+            print(f"Change Owed: {total_ignored}")
+            continue
             # Output the final change owed to the user
         if total_inserted == COST:
-            print("Change Owed: 0")
+            print(f"Change Owed: {abs(COST - total_inserted - (total_ignored))}")
             break
+        if total_inserted > COST:
+            print(f"Change Owed: {total_ignored - total_inserted - COST}")
+            continue
 
 
 user_money = 0
