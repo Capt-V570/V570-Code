@@ -19,19 +19,20 @@ def coke_distributor(coin):
     total_inserted = 0
     # Prompt the user to insert coins until the cost of a bottle of Coke is reached
     while total_inserted < COST:
-        # Prompt the user to insert a coin
+        # Prompt the user to insert a coin & keep track of the change insert from the user
         coin = int(input(f"Amount Due: {COST - total_inserted}\nInsert coin: "))
-        # If the coin is an accepted coin, add it to the total amount inserted
+        # Check if the money is an accepted coin, add it to the total amount inserted
         if coin in COINS:
+            # keep record of the coins inserted
             total_inserted += coin
-            # Inform the user of the amount due
-            #print(f"Amount Due: {COST - total_inserted}\nInsert coin:")
+            # Inform user in case the coin is not accepted:
         if coin != COINS:
             print("Change not accepted")
+            # Output the final change owed to the user
         if total_inserted == COST:
-            # Output the change owed to the user
             print("Change Owed: 0")
             break
+
 
 user_money = 0
 
